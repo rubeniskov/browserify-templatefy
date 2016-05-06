@@ -1,0 +1,36 @@
+{
+  "name": "browserify-templatefy",
+  "version": "1.0.0",
+  "description": "A Browserify plugin to manage html template with js injection, angular supported",
+  "main": "templatefy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubeniskov/browserify-templatefy.git",
+    "url_commit": "git+https://github.com/rubeniskov/browserify-templatefy/commit",
+    "url_tag": "git+https://github.com/rubeniskov/browserify-templatefy/releases/tag"
+  },
+  "keywords": [
+    "template",
+    "html",
+    "angular",
+    "browserify"
+  ],
+  "author": {
+    "name": "Rubén López Gómez",
+    "email": "me@rubeniskov.com",
+    "url": "https://twitter.com/Rubeniskov"
+  },
+  "licenses": [
+    {
+      "type": "WTFPL",
+      "url": "https://github.com/rubeniskov/browserify-templatefy/blob/master/LICENSE.md"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/rubeniskov/browserify-templatefy/issues"
+  },
+  "homepage": "http://templatefy.rubeniskov.com"
+}
