@@ -2,7 +2,7 @@
   "name": "browserify-templatefy",
   "version": "1.0.0",
   "description": "A Browserify plugin to manage html template with js injection, angular supported",
-  "main": "templatefy.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -32,5 +32,24 @@
   "bugs": {
     "url": "https://github.com/rubeniskov/browserify-templatefy/issues"
   },
-  "homepage": "http://templatefy.rubeniskov.com"
+  "homepage": "http://templatefy.rubeniskov.com",
+  "dependencies": {
+    "browserify-transform-tools": "^1.6.0",
+    "inherify": "0.0.2",
+    "nomnom": "^1.8.1",
+    "templatefy": "0.0.8"
+  },
+  "peerDependencies": {
+    "browserify": ">= 2.3.0 < 14"
+  },
+  "devDependencies": {
+    "browserify": "13.0.1",
+    "chai": "^3.5.0",
+    "codecov": "^1.0.1",
+    "grunt": "^1.0.1",
+    "grunt-bump": "^0.8.0",
+    "grunt-npm": "0.0.2",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5"
+  }
 }
