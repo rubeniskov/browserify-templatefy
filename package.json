@@ -1,6 +1,6 @@
 {
   "name": "browserify-templatefy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Browserify plugin to manage html template with js injection, angular supported",
   "main": "index.js",
   "scripts": {
