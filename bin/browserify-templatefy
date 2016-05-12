@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+
+const
+    path = require('path'),
+    fs = require('fs'),
+    util = require('util'),
+    pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8')),
+    opts = require('nomnom')
+        .option('directory', {
+            abbr: 'd',
+            default: process.cwd(),
+            help: 'Directory find templates'
+        })
+        .option('extensions', {
+            abbr: 'e',
+            default: 'htm html',
+            help: 'Extensions to be matched when search templates files in directory'
+        })
+        .option('ignore', {
+            abbr: 'i',
+            default: 'xml',
+            help: 'Extensions to be ignored'
+        })
+        .option('include', {
+            abbr: 'I',
+            list: true,
+            help: 'Include template files to be required even not matched in dependencies'
+        })
+        .option('exclude', {
+            abbr: 'E',
+            list: true,
+            help: 'Exclude template files to be discarted even matched in dependencies'
+        })
+        .option('angular', {
+            abbr: 'a',
+            flag: true,
+            help: 'Angular templateCache injection'
+        })
+        .option('version', {
+            abbr: 'v',
+            flag: true,
+            help: 'Print version and exit',
+            callback: function() {
+                return util.format("version %s", pkg.version);
+            }
+        })
+        .parse();
