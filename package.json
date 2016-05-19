@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+    "test": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec && istanbul-combine ./coverage/coverage.json ./coverage/coverage-**.json && node_modules/codecov/bin/codecov"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rubeniskov/browserify-templatefy.git",
