@@ -38,7 +38,7 @@
     "inherify": "0.0.2",
     "nomnom": "^1.8.1",
     "optiopus": "^0.1.3",
-    "templatefy": "^0.1.2"
+    "templatefy": "^0.1.7"
   },
   "peerDependencies": {
     "browserify": ">= 2.3.0 < 14"
