@@ -1,3 +1,4 @@
+[![Beerpay](https://beerpay.io/rubeniskov/browserify-templatefy/badge.svg?style=flat-square)](https://beerpay.io/rubeniskov/browserify-templatefy)
 # Browserify-Templatefy
 
 [![Build Status][travis-badge]][travis-url]
