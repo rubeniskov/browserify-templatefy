@@ -1,11 +1,10 @@
 const
-    expect = require("chai").expect,
     browserify = require("browserify"),
     templatefy = require('..');
 
-describe('Browserify Templatefy', function() {
-    this.timeout(10000);
-    describe('#api', function() {
+module.exports = function(expect) {
+    
+    describe('#browserify', function() {
         var b, contents = '';
 
         beforeEach(function(done) {
@@ -19,7 +18,7 @@ describe('Browserify Templatefy', function() {
                 });
 
             b.bundle()
-                .on('data', function(data){
+                .on('data', function(data) {
                     contents += data.toString();
                 })
                 .on('end', done);
@@ -30,4 +29,4 @@ describe('Browserify Templatefy', function() {
             expect(contents).to.have.string('<h2></h2>');
         });
     });
-});
+}
