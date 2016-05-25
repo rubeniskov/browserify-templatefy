@@ -3,11 +3,15 @@
   "version": "1.0.3",
   "description": "A Browserify plugin to manage html template with js injection, angular supported",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": ">=0.12"
+  },
+  "bin": {
+    "templatefy": "./bin/templatefy"
   },
   "scripts": {
-    "test": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec && node_modules/codecov/bin/codecov"
+    "test": "rm -rf coverage && node_modules/istanbul/lib/cli.js cover --print=none -i ./lib/**/*.js node_modules/mocha/bin/_mocha -- test/specs.js  && node_modules/istanbul-combine/cli.js -d ./coverage -p both -r lcov -r html ./coverage/coverage.json ./coverage/coverage-**.json",
+    "ci-test": "npm test && node_modules/codecov/bin/codecov && node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,8 @@
     "template",
     "html",
     "angular",
-    "browserify"
+    "browserify",
+    "templatefy"
   ],
   "author": {
     "name": "Rubén López Gómez",
@@ -49,11 +54,13 @@
   "devDependencies": {
     "browserify": "13.0.1",
     "chai": "^3.5.0",
+    "codeclimate-test-reporter": "^0.3.1",
     "codecov": "^1.0.1",
     "grunt": "^1.0.1",
     "grunt-bump": "^0.8.0",
     "grunt-npm": "0.0.2",
     "istanbul": "^0.4.3",
+    "istanbul-combine": "^0.3.0",
     "mocha": "^2.4.5"
   }
 }
