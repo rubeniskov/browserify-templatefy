@@ -3,6 +3,9 @@
   "version": "1.0.8",
   "description": "A Browserify plugin to manage html template with js injection, angular supported",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "engines": {
     "node": ">=0.12"
   },
